@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Local Discovery Hub - Your guide to local businesses, services, and community connections. Find restaurants, shops, accommodations, and more." />
+    <title>Local Discovery - Find Your Neighborhood Gems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'page-bg': '#f8fafc', // slate-50
+              'card-bg': '#ffffff', // white
+              'text-header': '#0f172a', // slate-900 (near black for main text)
+              'text-body': '#334155', // slate-700 (for secondary text)
+              'text-muted': '#64748b', // slate-500
+              'brand-primary': '#0284c7', // sky-600
+              'brand-primary-hover': '#0369a1', // sky-700
+              'brand-accent': '#4f46e5', // indigo-600
+              'brand-accent-hover': '#4338ca', // indigo-700
+              'border-color': '#cbd5e1', // slate-300
+              'input-bg': '#ffffff',
+              'focus-ring': '#0ea5e9', // sky-500 (can be same as brand-primary)
+              
+              // Keeping old names for now to avoid breaking existing component classes immediately,
+              // but new development should use the semantic names above.
+              // These will be gradually replaced.
+              primary: '#0284c7', // sky-600 (New Primary)
+              'primary-hover': '#0369a1', // sky-700 (New Primary Hover)
+              secondary: '#f1f5f9', // slate-100 (New Secondary for subtle backgrounds)
+              accent: '#4f46e5', // indigo-600 (New Accent)
+              'accent-hover': '#4338ca', // indigo-700 (New Accent Hover)
+              'light-gray': '#e2e8f0', // slate-200 (borders, dividers)
+              'medium-gray': '#64748b', // slate-500 (muted text, icons)
+              'dark-gray': '#1e293b', // slate-800 (primary text, some headings)
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-up': 'slideUp 0.5s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 30px #ffffff inset !important; /* Matches input-bg */
+          -webkit-text-fill-color: #0f172a !important; /* Matches text-header (near black) */
+          transition: background-color 5000s ease-in-out 0s; /* Another trick to delay bg change */
+      }
+      /* For Firefox - though it's generally better at respecting styles */
+      input:-moz-autofill,
+      input:-moz-autofill-preview {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        box-shadow: 0 0 0 30px #ffffff inset !important; /* Ensure this is similar to -webkit-box-shadow */
+      }
+
+      textarea:-webkit-autofill,
+      textarea:-webkit-autofill:hover,
+      textarea:-webkit-autofill:focus,
+      textarea:-webkit-autofill:active {
+          -webkit-box-shadow: 0 0 0 30px #ffffff inset !important; /* Matches input-bg */
+          -webkit-text-fill-color: #0f172a !important; /* Matches text-header (near black) */
+          transition: background-color 5000s ease-in-out 0s;
+      }
+      textarea:-moz-autofill,
+      textarea:-moz-autofill-preview {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        box-shadow: 0 0 0 30px #ffffff inset !important;
+      }
+
+      select:-webkit-autofill,
+      select:-webkit-autofill:hover,
+      select:-webkit-autofill:focus {
+          -webkit-box-shadow: 0 0 0 30px #ffffff inset !important; /* Matches input-bg */
+          -webkit-text-fill-color: #0f172a !important; /* Matches text-header (near black) */
+          transition: background-color 5000s ease-in-out 0s;
+      }
+      select:-moz-autofill,
+      select:-moz-autofill-preview {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+        box-shadow: 0 0 0 30px #ffffff inset !important;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script type="importmap">
+{
+  "imports": {
+    "react/jsx-runtime": "https://esm.sh/react@^19.1.0/jsx-runtime",
+    "react/jsx-dev-runtime": "https://esm.sh/react@^19.1.0/jsx-dev-runtime",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/client": "https://esm.sh/react-dom@^19.1.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@^6.23.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.0.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-page-bg antialiased text-text-body">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
