@@ -6,7 +6,7 @@ A no-code platform built with modern web technologies to connect businesses and 
 
 ## 🚀 Live Demo & Source Code
 
-- **Live Site:** *(add demo link if available)*  
+- **Live Site:** https://local-discovery-hub.vercel.app/  
 - **Source Code:** [Local‑Discovery‑Hub GitHub Repository](https://github.com/Abhishek-Saini-Coder/Local-Discovery-Hub)
 
 ---
